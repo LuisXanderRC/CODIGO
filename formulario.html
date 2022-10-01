@@ -4,38 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
 </head>
 <body>
     <!-- PARA PODER CREAR UN FORMULARIO NECESITAMOS LA ETIQUETA form -->
     <!-- IMPORTANT: Casi todos los tipos de input tienen placeholder -->
+    <!-- required: true (verdadero) -->
     <form action="">
         <!-- Lo que está dentro son las partes del formulario -->
         <p>
-            <input id="input-nombre" type="text" placeholder="Ingrese su nombre">
+            <input id="input-nombre" type="text" required name="nombre" disabled placeholder="Ingrese su nombre">
+        </p>
+        
+        <!-- Que el input tenga como máximo 8 dígitos -->
+        <!-- maxlength: para la longitud máx-->
+        <input type="number"
+        id="input-dni"
+        style="width: 162px;"
+        maxlength="8"
+        name="dni"
+        placeholder="Ingrese su DNI">
+
+        <p>
+            <input type="number" value="25" required name="edad" readonly placeholder="Ingrese su edad">
         </p>
 
         <p>
-            <input type="number" placeholder="Ingrese su edad">
+            <input type="email" required placeholder="Ingrese su correo">
         </p>
 
         <p>
-            <input type="email" placeholder="Ingrese su correo">
+            <input type="password" required placeholder="Ingrese su contraseña">
         </p>
 
         <p>
-            <input type="password" placeholder="Ingrese su contraseña">
-        </p>
-
-        <p>
-            <input type="date" placeholder="Ingrese su fecha">
+            <input type="date" required placeholder="Ingrese su fecha">
         </p>
 
         <!-- Lista de opciones -->
         <p>
-            <select>
-                <option value="" disabled selected>Selecciona un curso</option>
-                <option value="curso-react">Curso de React</option>
+            <select required>
+                <option value="1" disabled selected>Selecciona un curso</option>
+                <option value="curso-react" selected>Curso de React</option>
                 <option value="curso-html">Curso de HTML</option>
                 <option value="curso-css">Curso de CSS</option>
                 <option value="curso-angular">Curso de Angular</option>
