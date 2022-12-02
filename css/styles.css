@@ -10,3 +10,9 @@ h1 {
     display: none /* !important */;
 }
 
+.product_cell{
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+}
